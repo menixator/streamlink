@@ -20,8 +20,6 @@ description = """\
 Streamlink is a command-line utility that extracts streams from various services and pipes them into a video player of choice.\
 """
 readme = "README.md"
-license = "BSD-2-Clause"
-license-files = ["LICENSE"]
 authors = [
   { name = "Streamlink" },
   { email = "streamlink@protonmail.com" }
