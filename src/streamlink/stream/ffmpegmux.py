@@ -205,8 +205,10 @@ class FFMPEGMuxer(StreamIO):
             loglevel,
         ]
 
+        import os
         for np in self.pipes:
             self._cmd.extend(["-i", str(np.path)])
+            self._cmd.extend(["-decryption_key", os.environ.get("DECRYPTION_KEY")])
 
         self._cmd.extend(["-c:v", videocodec])
         self._cmd.extend(["-c:a", audiocodec])
